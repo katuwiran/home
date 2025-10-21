@@ -370,3 +370,39 @@ binds {
     //    spawn "dms" "ipc" "call" "night" "toggle";
     // }
 }
+
+// ┳
+// ┃┏┓┏┓┓┏╋┏
+// ┻┛┗┣┛┗┻┗┛     Inputs
+//    ┛
+input {
+    keyboard {
+        xkb { }
+        numlock // Enable numlock on startup, omitting this setting disables it.
+        repeat-delay 300
+        repeat-rate 50
+    }
+
+    touchpad {
+        off // my touchpad is current broken :"(
+        tap
+        drag true // tap and drag
+        natural-scroll
+        disabled-on-external-mouse
+    }
+
+    mouse {
+        accel-speed -0.5     // slower mouse
+        accel-profile "flat" // no mouse acceleration
+    }
+
+    // don't have one (for now?)
+    /-trackpoint { }
+    /-trackball { }
+
+    warp-mouse-to-focus mode="center-xy" // warp cursor to the center of newly focused windows.
+    focus-follows-mouse max-scroll-amount="20%" // Allow focus-follows-mouse when it results in scrolling at most 10% of the screen.
+    mod-key "Super" // possible values: Super, Alt, Mod3, Mod5, Ctrl, Shift
+    mod-key-nested "Alt" // possible values: Super, Alt, Mod3, Mod5, Ctrl, Shift
+    // workspace-auto-back-and-forth // disabling auto back and forth for now
+}
