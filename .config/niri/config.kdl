@@ -3,19 +3,12 @@
 // ┣┫┓┃┏┏┓┓ ┏  ┃┃┓┏┓┓  ┃ ┏┓┏┓╋┓┏┓     K. Rikaisuru. 10.21.2025.
 // ┛┗┗┛┗┗┻┗ ┛  ┛┗┗┛ ┗  ┗┛┗┛┛┗┛┗┗┫     colophon: font `tmplr`. https://github.com/loreanvictor/tmplr/blob/main/font.flf
 //                              ┛
-//
-//
-//  Table of Contents
-//
-//  Environment Variables
-//  Inputs
-//  Keybinds
+
 
 // ┏┓    •                ┓┏    •  ┓ ┓
 // ┣ ┏┓┓┏┓┏┓┏┓┏┓┏┳┓┏┓┏┓╋  ┃┃┏┓┏┓┓┏┓┣┓┃┏┓┏     Environment Variables
 // ┗┛┛┗┗┛┗┛ ┗┛┛┗┛┗┗┗ ┛┗┗  ┗┛┗┻┛ ┗┗┻┗┛┗┗ ┛
 //
-
 environment {
 	// desktop stuff
     XDG_CURRENT_DESKTOP "niri"
@@ -372,8 +365,8 @@ binds {
 }
 
 // ┳
-// ┃┏┓┏┓┓┏╋┏
-// ┻┛┗┣┛┗┻┗┛     Inputs
+// ┃┏┓┏┓┓┏╋┏     Inputs
+// ┻┛┗┣┛┗┻┗┛     https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 //    ┛
 input {
     keyboard {
