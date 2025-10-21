@@ -3,6 +3,44 @@
 // ┣┫┓┃┏┏┓┓ ┏  ┃┃┓┏┓┓  ┃ ┏┓┏┓╋┓┏┓     K. Rikaisuru. 10.21.2025.
 // ┛┗┗┛┗┗┻┗ ┛  ┛┗┗┛ ┗  ┗┛┗┛┛┗┛┗┗┫     colophon: font `tmplr`. https://github.com/loreanvictor/tmplr/blob/main/font.flf
 //                              ┛
+
+// ┏┓    •                ┓┏    •  ┓ ┓
+// ┣ ┏┓┓┏┓┏┓┏┓┏┓┏┳┓┏┓┏┓╋  ┃┃┏┓┏┓┓┏┓┣┓┃┏┓┏     Environment Variables
+// ┗┛┛┗┗┛┗┛ ┗┛┛┗┛┗┗┗ ┛┗┗  ┗┛┗┻┛ ┗┗┻┗┛┗┗ ┛
+//
+
+environment {
+	// desktop stuff
+    XDG_CURRENT_DESKTOP "niri"
+    LANG "en_US.UTF-8"
+    LC_ALL "en_US.UTF-8"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    GDK_DEBUG "portals"    // to force using the KDE file picker, if the software supports it anyway. all hail Linux's fragmentation. thanks, Gnome
+    XDG_MENU_PREFI "arch-" // to fix missing default apps in KDE Dolphin
+
+	// styling
+    QT_STYLE_OVERRIDE "kvantum"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+
+    // preferences
+    TERM "alacritty"
+
+    // foobar2000
+    WINEARCH "wow64"
+    WINEPREFIX "/home/rikai/.local/share/wineprefixes/foobar2000"
+
+    // Folders
+    Rikai "/mnt/Rikai"
+    WINDOWS "/mnt/Windows"
+    RIDER_PROJECTS "/mnt/Rikai/Projects/Rider/"
+    INTELLIJ_PROJECTS "/mnt/Rikai/Projects/Rider/"
+
+    //dotnet
+    DOTNET_CLI_TELEMETRY_OPTOUT "1"
+}
+
 // ┓┏┓    ┓ •   ┓
 // ┃┫ ┏┓┓┏┣┓┓┏┓┏┫┏     Keybinds
 // ┛┗┛┗ ┗┫┗┛┗┛┗┗┻┛
