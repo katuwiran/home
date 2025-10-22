@@ -11,6 +11,7 @@
 include "environment/inputs.kdl"      // input devices
 include "environment/startup.kdl"     // startup applications
 include "environment/variables.kdl"   // environment variables
+include "environment/outputs.kdl"     // output variables
 
 //=============||
 //   General   ||
