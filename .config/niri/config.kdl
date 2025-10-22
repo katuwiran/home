@@ -8,17 +8,20 @@
 //   Desktop Environment   ||
 //=========================||
 
-include "environment/inputs.kdl"      // input devices
+include "environment/inputs.kdl"      // mouse, keyboard, touch screen
 include "environment/startup.kdl"     // startup applications
 include "environment/variables.kdl"   // environment variables
-include "environment/outputs.kdl"     // output variables
+include "environment/outputs.kdl"     // monitor config
 
 //=============||
 //   General   ||
 //=============||
 
 include "general/gestures.kdl"        // miscellaneous configs
-include "general/miscellaneous.kdl"   // miscellaneous configs
+include "general/keybinds.kdl"        // keybinds for niri
+include "general/software.kdl"        // keybinds for software
+include "general/workspaces.kdl"      // workspace defs and keybinds
+include "general/windowing.kdl"       // window routing and rules
 include "general/miscellaneous.kdl"   // overview, csd, hotkey, screenshot path
 
 //=================||
