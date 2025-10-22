@@ -13,6 +13,7 @@ environment {
     XDG_MENU_PREFIX "arch-" // to fix missing default apps in KDE Dolphin
 
 	// styling
+    QT_QPA_PLATFORM "wayland"
     QT_STYLE_OVERRIDE "kvantum"
     QT_QPA_PLATFORMTHEME "qt5ct"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
