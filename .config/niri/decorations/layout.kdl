@@ -1,0 +1,30 @@
+
+// ┓
+// ┃ ┏┓┓┏┏┓┓┏╋┏     Layouts
+// ┗┛┗┻┗┫┗┛┗┻┗┛
+//      ┛
+layout {
+    // Set gaps around windows in logical pixels.
+    gaps 10
+    // center-focused-column "on-overflow" // only center when it doesn't fit on screen
+    // always-center-single-column
+
+    // widths for "switch-preset-column-width"
+    preset-column-widths {
+        // proportion 1.0
+        proportion 0.9
+        proportion 0.5
+        proportion 0.3
+        // fixed 1920 // Fixed sets the width in logical pixels exactly.
+    }
+
+    // heights for "switch-preset-window-height"
+    preset-window-heights { }
+
+    // You can change the default width of the new windows.
+    default-column-width {
+    	proportion 1.0
+    }
+    // If you leave the brackets empty, the windows themselves will decide their initial width.
+    // default-column-width {}
+}

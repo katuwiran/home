@@ -20,3 +20,10 @@ include "environment/outputs.kdl"     // output variables
 include "general/gestures.kdl"        // miscellaneous configs
 include "general/miscellaneous.kdl"   // miscellaneous configs
 include "general/miscellaneous.kdl"   // overview, csd, hotkey, screenshot path
+
+//=================||
+//   Decorations   ||
+//=================||
+include "decorations/animations.kdl"  // animations configs
+include "decorations/borders.kdl"     // rounded corners, borders, focus ring
+include "decorations/layout.kdl"      // gaps, struts, width, height, presets
