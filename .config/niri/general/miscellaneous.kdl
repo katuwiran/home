@@ -1,0 +1,17 @@
+
+// ┳┳┓•    ┓┓
+// ┃┃┃┓┏┏┏┓┃┃┏┓┏┓┏┓┏┓┓┏┏     Miscellaneous. why is this not a namespace of its own. it ruins the TOC :(
+// ┛ ┗┗┛┗┗ ┗┗┗┻┛┗┗ ┗┛┗┻┛     https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous
+//
+prefer-no-csd // disable client side decorations
+hotkey-overlay {  // disable cheat sheet at startup
+	skip-at-startup
+	hide-not-bound
+}
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png" // You can also set this to null to disable saving screenshots to disk.
+xwayland-satellite {
+	path "xwayland-satellite"
+}
+overview {
+	zoom 0.33
+}

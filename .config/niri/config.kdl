@@ -18,3 +18,4 @@ include "environment/outputs.kdl"     // output variables
 //=============||
 
 include "general/keybinds.kdl"        // keybinds and software picks (might separate in the future?)
+include "general/miscellaneous.kdl"   // miscellaneous configs
