@@ -17,5 +17,6 @@ include "environment/outputs.kdl"     // output variables
 //   General   ||
 //=============||
 
-include "general/keybinds.kdl"        // keybinds and software picks (might separate in the future?)
+include "general/gestures.kdl"        // miscellaneous configs
 include "general/miscellaneous.kdl"   // miscellaneous configs
+include "general/miscellaneous.kdl"   // overview, csd, hotkey, screenshot path
