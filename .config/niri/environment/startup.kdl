@@ -12,6 +12,6 @@ spawn-at-startup "bash" "-c" "kbuildsycoca6"  // to generate dolphin's applicati
 //==============||
 //   Services   ||
 //==============||
-spawn-sh-at-startup "dms run"     // Starts DankShell
+// spawn-sh-at-startup "dms run"     // Starts DankShell
 spawn-sh-at-startup "awatcher &"  // launches awatcher server
 spawn-sh-at-startup "systemctl --user start hyprpolkitagent" // launchers authentication agent
