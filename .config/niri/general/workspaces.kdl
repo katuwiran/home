@@ -1,0 +1,32 @@
+
+workspace "terminals"
+workspace "references"
+workspace "programming"
+workspace "endeavors"
+workspace "entertainment"
+
+binds {
+	// For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
+    // will all refer to the 3rd workspace.
+    Mod+1 { focus-workspace "terminals"; }
+    Mod+2 { focus-workspace "references"; }
+    Mod+3 { focus-workspace "programming"; }
+    Mod+4 { focus-workspace "endeavors"; }
+    Mod+5 { focus-workspace "entertainment"; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    Mod+Shift+1 { move-column-to-workspace "terminals"; }
+    Mod+Shift+2 { move-column-to-workspace "references"; }
+    Mod+Shift+3 { move-column-to-workspace "programming"; }
+    Mod+Shift+4 { move-column-to-workspace "endeavors"; }
+    Mod+Shift+5 { move-column-to-workspace "entertainment"; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10; }
+}
