@@ -8,6 +8,7 @@
 //   Desktop Environment   ||
 //=========================||
 
+include "environment/startup.kdl"     // outputs
 include "environment/variables.kdl"     // environment variables
 
 // ┓┏┓    ┓ •   ┓
