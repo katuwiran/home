@@ -15,7 +15,7 @@ binds {
     Mod+Shift+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
 
     Mod+Q { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "zed" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | jq -r --arg s "zeditor" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
     | xargs -r niri msg action focus-window --id
 "###; }
 
