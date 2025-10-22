@@ -10,7 +10,7 @@ environment {
     LC_ALL "en_US.UTF-8"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     GDK_DEBUG "portals"    // to force using the KDE file picker, if the software supports it anyway. all hail Linux's fragmentation. thanks, Gnome
-    XDG_MENU_PREFI "arch-" // to fix missing default apps in KDE Dolphin
+    XDG_MENU_PREFIX "arch-" // to fix missing default apps in KDE Dolphin
 
 	// styling
     QT_STYLE_OVERRIDE "kvantum"
