@@ -1,0 +1,54 @@
+
+// ┏┓  ┏            ┏┓• ┓
+// ┗┓┏┓╋╋┓┏┏┏┓┏┓┏┓  ┃┃┓┏┃┏┏     Software Picks
+// ┗┛┗┛┛┗┗┻┛┗┻┛ ┗   ┣┛┗┗┛┗┛
+//
+binds {
+	Mod+D { spawn "fuzzel"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Shift+E { spawn "dolphin"; } // file manager
+
+    Mod+Shift+V { spawn "vesktop"; }
+    Mod+Shift+G { spawn "smerge"; }
+    Mod+Shift+L { spawn "logseq"; }
+    Mod+Shift+M { spawn-sh "wine /mnt/Rikai/Software/foobar2000x32-georgia/foobar2000.exe"; }
+    Mod+Shift+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+
+    Mod+Q { spawn-sh r###"niri msg --json windows \
+    | jq -r --arg s "zed" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | xargs -r niri msg action focus-window --id
+"###; }
+
+    Mod+V { spawn-sh r###"niri msg --json windows | jq -r --arg s "vesktop" '.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase))) | .id' | xargs -r niri msg action focus-window --id"###; }
+    Mod+G { spawn-sh r###"niri msg --json windows | jq -r --arg s "smerge" '.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase))) | .id' | xargs -r niri msg action focus-window --id"###; }
+
+    Mod+M { spawn-sh r###"niri msg --json windows \
+    | jq -r --arg s "foobar2000" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | xargs -r niri msg action focus-window --id
+"###; }
+
+    Mod+N { spawn-sh r###"niri msg --json windows \
+    | jq -r --arg s "easyeffects" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | xargs -r niri msg action focus-window --id
+"###; }
+
+    Mod+E { spawn-sh r###"niri msg --json windows \
+    | jq -r --arg s "dolphin" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | xargs -r niri msg action focus-window --id
+"###; }
+
+    Mod+L { spawn-sh r###"niri msg --json windows \
+    | jq -r --arg s "logseq" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | xargs -r niri msg action focus-window --id
+"###; }
+
+    Mod+W { spawn-sh r###"niri msg --json windows \
+    | jq -r --arg s "firefox" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | xargs -r niri msg action focus-window --id
+"###; }
+
+    Mod+O { spawn-sh r###"niri msg --json windows \
+    | jq -r --arg s "okular" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
+    | xargs -r niri msg action focus-window --id
+"###; }
+}
