@@ -6,8 +6,9 @@
 layout {
     // Set gaps around windows in logical pixels.
     gaps 10
-    // center-focused-column "on-overflow" // only center when it doesn't fit on screen
-    // always-center-single-column
+    // center-focused-column "always" // always center
+    center-focused-column "on-overflow" // only center when it doesn't fit on screen
+    always-center-single-column
 
     // widths for "switch-preset-column-width"
     preset-column-widths {
