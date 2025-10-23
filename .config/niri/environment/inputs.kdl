@@ -13,8 +13,8 @@ input {
 
     touchpad {
         off // my touchpad is current broken :"(
-        tap
-        drag true // tap and drag
+        // tap
+        // drag true // tap and drag
         natural-scroll
         disabled-on-external-mouse
     }
@@ -25,8 +25,8 @@ input {
     }
 
     // don't have one (for now?)
-    trackpoint { }
-    trackball { }
+    trackpoint { off; }
+    trackball { off; }
 
     warp-mouse-to-focus mode="center-xy" // warp cursor to the center of newly focused windows.
     focus-follows-mouse max-scroll-amount="0%" // Allow focus-follows-mouse when no scrolling

@@ -33,9 +33,9 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+Tab repeat=false { toggle-overview; }
+    Mod+Tab cooldown-ms=50 repeat=true  { toggle-overview; }
 
-    Mod+C repeat=false { close-window; }
+    Mod+C cooldown-ms=50  { close-window; }
 
     // workspace navigation
     Mod+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
