@@ -30,3 +30,8 @@ include "general/miscellaneous.kdl"   // overview, csd, hotkey, screenshot path
 include "decorations/animations.kdl"  // animations configs
 include "decorations/borders.kdl"     // rounded corners, borders, focus ring
 include "decorations/layout.kdl"      // gaps, struts, width, height, presets
+
+//===============||
+//   "Plugins"   ||
+//===============||
+include "plugins/niri-scratchpad.kdl" // scratchpad capability. thanks, https://github.com/gvolpe!
