@@ -1,17 +1,110 @@
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Window-Rules
+// ┓ ┏•   ┓     •           ┓  ┳┓     •
+// ┃┃┃┓┏┓┏┫┏┓┓┏┏┓┏┓┏┓  ┏┓┏┓┏┫  ┣┫┏┓┓┏╋┓┏┓┏┓     Windowing and Routing
+// ┗┻┛┗┛┗┗┻┗┛┗┻┛┗┛┗┗┫  ┗┻┛┗┗┻  ┛┗┗┛┗┻┗┗┛┗┗┫
+//                  ┛                     ┛
 
-
-// Open the Firefox picture-in-picture player as floating by default.
+//==============||
+//   All Apps   ||
+//==============||
+//
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+	open-maximized true
+}
+
+//========================||
+//   Workspace Specific   ||
+//========================||
+
+// `terminals` workspace. window rules don't work if you change the title, so...
+window-rule {
+	open-on-workspace "terminals"
+
+	match title="btop"
+	match app-id="protonvpn-app" // the community gtk
+}
+
+//  `references` workspace.
+window-rule {
+	open-on-workspace "references"
+
+	match app-id="firefox"
+	match app-id="okular"
+	match app-id="krita"
+}
+
+//  `programming` workspace.
+window-rule {
+	open-on-workspace "programming"
+
+	match app-id="dev.zed.Zed-Preview"
+	match app-id="smerge"
+	match app-id="subl"
+}
+
+//  `endeavors` workspace.
+window-rule {
+	open-on-workspace "endeavors"
+
+	match app-id="zoom"
+	match app-id="Logseq"
+	match app-id="vikunja"
+	match app-id="krita"
+}
+
+//  `recreation` workspace.
+window-rule {
+	open-on-workspace "recreation"
+
+	match app-id="easyeffects"
+	match app-id="vesktop"
+	match app-id="foobar2000.exe"
+}
+
+//==========================||
+//   Application Specific   ||
+//==========================||
+
+// Firefox
+window-rule {
+	// Open the Firefox picture-in-picture player as floating by default.
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
+
+// Alacritty
+window-rule {
+	match app-id="Alacritty"
+	open-maximized false
+	default-column-width { proportion 0.3; }
+}
+
+// foobar2000
+window-rule {
+	match app-id="foobar2000.exe"
+	open-fullscreen true
+	open-floating true
+
+	focus-ring { off; }
+	border { off; }
+	shadow { off; }
+}
+
+// krita
+window-rule {
+	match app-id="krita"
+	open-maximized true
+	open-fullscreen true
+	open-floating true
+
+	focus-ring { off; }
+	border { off; }
+	shadow { off; }
+}
+
+//==========================||
+//   Screencast Exception   ||
+//==========================||
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
@@ -25,31 +118,18 @@ window-rule {
     // block-out-from "screencast"
 }
 
-window-rule {
-	match app-id="foobar2000.exe"
-	open-on-workspace "entertainment"
-	open-fullscreen true
-	open-floating true
 
+// zoom
+window-rule {
+	match title="meeting bottombar popup"
+	open-floating true
 	focus-ring { off; }
 	border { off; }
 	shadow { off; }
 }
 
-window-rule {
-	match app-id="Alacritty"
-	open-maximized false
-	default-column-width { proportion 0.3; }
-}
-
-window-rule {
-	match app-id="easyeffects"
-	open-on-workspace "entertainment"
-	open-maximized true
-}
-
-window-rule {
-	match app-id="vesktop"
-	open-on-workspace "entertainment"
-	open-maximized true
-}
+// window-rule {
+// 	match app-id=""
+// 	open-maximized false
+// 	default-column-width { proportion 0.3; }
+// }
