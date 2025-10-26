@@ -1,0 +1,4 @@
+[application]
+frontend_url=http://localhost:3456/
+api_url=http://localhost:3456/api/v1
+
