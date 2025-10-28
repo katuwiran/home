@@ -28,7 +28,7 @@ def bring_scratchpad_window_to_focus(window_id, args):
         niri_cmd(["move-window-to-monitor", "--id", str(window_id), focused_workspace["output"]])
     if args.animations and not scratch_window["is_floating"]:
         niri_cmd(["move-window-to-floating", "--id", str(window_id)])
-    niri_cmd(["focus-window", "--id", str(window_id)])
+    # niri_cmd(["focus-window", "--id", str(window_id)])
 
 def find_scratch_window(args, windows):
     for window in windows:
