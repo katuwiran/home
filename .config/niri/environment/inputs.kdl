@@ -27,6 +27,8 @@ input {
     // don't have one (for now?)
     trackpoint { off; }
     trackball { off; }
+    touch { off; }
+    tablet { off; map-to-output "eDP-1"; }
 
     warp-mouse-to-focus mode="center-xy" // warp cursor to the center of newly focused windows.
     focus-follows-mouse max-scroll-amount="0%" // Allow focus-follows-mouse when no scrolling

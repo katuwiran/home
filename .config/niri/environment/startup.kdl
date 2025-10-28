@@ -12,6 +12,8 @@ spawn-at-startup "bash" "-c" "kbuildsycoca6"  // to generate dolphin's applicati
 //==============||
 //   Services   ||
 //==============||
-// spawn-sh-at-startup "dms run"     // Starts DankShell
+spawn-sh-at-startup "swww-daemon &"
+spawn-sh-at-startup "hyprlax $Rikai/Files/Wallpaper/Landscape/pexels-invisiblepower-1076885.jpg"
 spawn-sh-at-startup "awatcher &"  // launches awatcher server
 spawn-sh-at-startup "systemctl --user start hyprpolkitagent" // launchers authentication agent
+spawn-sh-at-startup "systemctl --user start vikunja" // launchers authentication agent
