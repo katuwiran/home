@@ -1,11 +1,10 @@
 
 // ┳┓•  •  ┏┓       ┓      ┓
 // ┃┃┓┏┓┓━━┗┓┏┏┓┏┓╋┏┣┓┏┓┏┓┏┫     Niri-Scratchpad
-// ┛┗┗┛ ┗  ┗┛┗┛ ┗┻┗┗┛┗┣┛┗┻┗┻
+// ┛┗┗┛ ┗  ┗┛┗┛ ┗┻┗┗┛┗┣┛┗┻┗┻     https://github.com/gvolpe/niri-scratchpad
 //                    ┛
 workspace "scratch"
-spawn-sh-at-startup r###"alacritty --class "scratchpad" --title "scratchpad"###
-spawn-sh-at-startup r###"wine $Rikai/Software/foobar2000x32-georgia/foobar2000.exe"###
+spawn-sh-at-startup "alacritty --class \"scratchpad\""
 
 window-rule {
     match app-id="scratchpad"
@@ -13,6 +12,12 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id="wnr"
+    open-on-workspace "scratch"
+    open-floating true
+}
+
 binds {
-	Mod+T { spawn-sh "~/ns.py -id scratchpad"; };
+	Mod+T { spawn-sh "~/bin/ns.py -id scratchpad"; };
 }
