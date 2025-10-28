@@ -35,3 +35,4 @@ include "decorations/layout.kdl"      // gaps, struts, width, height, presets
 //   "Plugins"   ||
 //===============||
 include "plugins/niri-scratchpad.kdl" // scratchpad capability. thanks, https://github.com/gvolpe!
+include "plugins/nsticky.kdl"         // sticky capability.     thanks, https://github.com/lonerOrz!
