@@ -5,7 +5,7 @@
 //       ┛
 binds {
 
-	Alt+Tab { focus-workspace-previous; }
+	Alt+Tab { focus-window-previous; }
 	Alt+F4 { close-window; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -77,7 +77,7 @@ binds {
     Mod+BracketRight { consume-or-expel-window-right; }     // so this stays
     Mod+Period { expel-window-from-column; }
 
-    Mod+R { switch-preset-column-width; }
+    Mod+Space { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
@@ -105,7 +105,7 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+U       { toggle-window-floating; }
+    Mod+Shift+Space       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.

@@ -5,7 +5,7 @@
 //      ┛
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 10
+    gaps 30
     // center-focused-column "always" // always center
     center-focused-column "on-overflow" // only center when it doesn't fit on screen
     always-center-single-column
