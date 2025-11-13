@@ -7,9 +7,52 @@
 //==============||
 //   All Apps   ||
 //==============||
-//
+// all apps by default, full size
 window-rule {
 	open-maximized true
+	open-fullscreen false
+	open-focused true
+}
+// half size
+window-rule {
+	match app-id="org.kde.dolphin"
+	match app-id="FileRoller"
+
+	default-column-width { proportion 0.5; }
+}
+// no focus upon opening
+window-rule {
+	match app-id="scratchpad"
+	match app-id="easyeffects"
+	match app-id="wnr"
+	match app-id="foobar2000.exe"
+	match app-id="com.github.kolcha.DigitalClock5"
+
+	open-focused false
+}
+// no distractions
+window-rule {
+	match app-id="wnr"
+	match app-id="com.github.kolcha.DigitalClock5"
+	match app-id="zoom"
+
+	focus-ring { off; }
+    border { off; }
+    shadow { off; }
+
+    tab-indicator {
+        active-color "red"
+        inactive-color "gray"
+        urgent-color "blue"
+        // active-gradient from="#80c8ff" to="#bbddff" angle=45
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        // urgent-gradient from="#800" to="#a33" angle=45
+    }
+}
+// open floating
+window-rule {
+	match app-id="com.github.kolcha.DigitalClock5"
+	open-floating true
 }
 
 //========================||
