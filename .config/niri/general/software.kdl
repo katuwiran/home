@@ -3,109 +3,77 @@
 // ┗┓┏┓╋╋┓┏┏┏┓┏┓┏┓  ┃┃┓┏┃┏┏     Software Picks
 // ┗┛┗┛┛┗┗┻┛┗┻┛ ┗   ┣┛┗┗┛┗┛
 //
-
-spawn-sh-at-startup "logseq &"
-spawn-sh-at-startup "vikunja &"
-spawn-sh-at-startup "wnr &"
-
 binds {
 
 	// Q - Zed              W - Firefox       E - Dolphin      R - Rider         T - Alacritty
-	// A -                  S -               D - Fuzzel       F - *Maximize     G - Sublime Merge
-	// Z -                  X -               C - Caprine      V - Vestktop      B - OBS
+	// A -                  S - Sublime Text  D - Fuzzel       F - *Maximize     G - Sublime Merge
+	// Z - Zoom             X -               C - Caprine      V - Vestktop      B - OBS
 
-	// Y - WnR              U -               I -              O - Okular        P - Vikunja
+	// Y - WnR              U -               I - Calibre      O - Okular        P - Vikunja
 	// H - SQLite Browser   J -               K - Krita        L - Logseq
 	// N - EasyEffects      M - foobar2000
 
 
-	Mod+D { spawn "fuzzel"; }
 	Mod+Shift+Q { spawn "zeditor"; }
-    Mod+Shift+W { spawn "firefox"; }
+    Mod+Shift+W { spawn-sh "firefox &; sleep 0.2; niri msg action toggle-window-floating"; }
     Mod+Shift+E { spawn "dolphin"; } // file manager
     Mod+Shift+R { spawn "rider"; }
     Mod+Shift+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
 
-    Mod+Shift+P { spawn-sh r#"$Rikai/Config/Linux/Vikunja-patched.AppImage"#; }
 
+    Mod+Shift+S { spawn "subl"; }
     Mod+Shift+G { spawn "smerge"; }
     Mod+Shift+H { spawn "sqlitebrowser"; }
 
     Mod+Shift+K { spawn-sh "GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb krita"; }
     Mod+Shift+L { spawn "logseq"; }
 
+    Mod+Shift+I { spawn "calibre"; }
+    Mod+Shift+O { spawn "okular"; }
+    Mod+Shift+P { spawn-sh r#"$RIKAI/Config/Linux/Vikunja-patched.AppImage"#; }
 
     Mod+Shift+V { spawn "vesktop"; }
     Mod+Shift+Z { spawn "zoom"; }
     Mod+Shift+C { spawn "caprine"; }
     Mod+Shift+B{ spawn "obs"; }
     Mod+Shift+N { spawn "easyeffects"; }
-    Mod+Shift+M { spawn-sh "beefweb_mpris2"; }
+    Mod+Shift+M { spawn-sh "beefweb_mpris"; }
     Mod+Shift+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
 
-    Mod+Z { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "zoom" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
-
-    Mod+C { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "caprine" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
 
 
-    Mod+Q { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "zed" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
 
-    Mod+K { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "krita" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
 
-    Mod+V { spawn-sh r###"niri msg --json windows | jq -r --arg s "vesktop" '[.[] | select(.app_id | ascii_downcase | contains($s | ascii_downcase))][0].id' | xargs -r -I{} niri msg action focus-window --id {}"###; }
-    Mod+G { spawn-sh r###"niri msg --json windows | jq -r --arg s "smerge" '.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase))) | .id' | xargs -r niri msg action focus-window --id"###; }
+   	// Q - Zed              W - Firefox       E - Dolphin      R - Rider         T - Alacritty
+	// A -                  S - Sublime Text  D - Fuzzel       F - *Maximize     G - Sublime Merge
+	// Z - Zoom             X -               C - Caprine      V - Vestktop      B - OBS
 
-    Mod+H { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "sqlitebrowser" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
+	// Y - WnR              U -               I -              O - Okular        P - Vikunja
+	// H - SQLite Browser   J -               K - Krita        L - Logseq
+	// N - EasyEffects      M - foobar2000
 
-    Mod+B { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "com.obsproject.Studio" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
+    Mod+Q { spawn-sh "~/bin/niriutils focus -w dev.zed.Zed-Preview"; }
+    Mod+W { spawn-sh "~/bin/niriutils focus -w firefox"; }
+    Mod+E { spawn-sh "~/bin/niriutils focus -w dolphin"; }
+    Mod+R { spawn-sh "~/bin/niriutils focus -w rider"; }
 
-    Mod+M { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "foobar2000" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
+    Mod+S { spawn-sh "~/bin/niriutils focus -w subl"; }
+	Mod+D { spawn "fuzzel"; }
+    Mod+G { spawn-sh "~/bin/niriutils focus -w smerge"; }
+    Mod+H { spawn-sh "~/bin/niriutils focus -w sqlitebrowser"; }
 
-    Mod+N { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "easyeffects" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
+    Mod+Z { spawn-sh "~/bin/niriutils focus -w zoom"; }
+    Mod+C { spawn-sh "~/bin/niriutils focus -w caprine"; }
+    Mod+V { spawn-sh "~/bin/niriutils focus -w vesktop"; }
+    Mod+B { spawn-sh "~/bin/niriutils focus -w com.obsproject.Studio"; }
 
-    Mod+E { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "dolphin" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
+    Mod+I { spawn-sh "~/bin/niriutils focus -w calibre"; }
+    Mod+O { spawn-sh "~/bin/niriutils focus -w okular"; }
+    Mod+P { spawn-sh "~/bin/niriutils focus -w vikunja"; }
 
-    Mod+L { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "logseq" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
+    Mod+L { spawn-sh "~/bin/niriutils focus -w logseq"; }
+    Mod+K { spawn-sh "~/bin/niriutils focus -w krita"; }
 
-    Mod+W { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "firefox" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
-
-    Mod+O { spawn-sh r###"niri msg --json windows \
-    | jq -r --arg s "okular" '[.[] | select((.title|ascii_downcase|contains($s|ascii_downcase)) or (.app_id|ascii_downcase|contains($s|ascii_downcase)))][0].id' \
-    | xargs -r niri msg action focus-window --id
-"###; }
-
-    Mod+P { spawn-sh r###"niri msg --json windows | jq -r --arg s "vikunja" '[.[] | select(.app_id | ascii_downcase | contains($s | ascii_downcase))][0].id' | xargs -r -I{} niri msg action focus-window --id {}"###; }
+    Mod+N { spawn-sh "~/bin/niriutils focus -w easyeffects"; }
+    Mod+M { spawn-sh "~/bin/niriutils focus -w foobar2000.exe"; }
 }
