@@ -174,12 +174,12 @@ min_score = 95
 # ------------------
 # Each player can override any of the default settings above
 # Example for VLC Media Player:
-# [player.vlc_media_player]
-# app_id = "1124968989538402334"
-# icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/VLC_Icon.svg/1200px-VLC_Icon.svg.png"
-# show_icon = true
-# allow_streaming = true
-# override_activity_type = "watching"
+[player.vlc_media_player]
+app_id = "1124968989538402334"
+icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/VLC_Icon.svg/1200px-VLC_Icon.svg.png"
+show_icon = true
+allow_streaming = true
+override_activity_type = "watching"
 
 # You can add more player-specific configurations below, like:
 # [player.spotify]
