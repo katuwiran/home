@@ -7,7 +7,9 @@
 //=================||
 //   Environment   ||
 //=================||
-spawn-at-startup "bash" "-c" "kbuildsycoca6"  // to generate dolphin's application preferences
+spawn-at-startup "bash" "-c" "kbuildsycoca6"           // to generate dolphin's application preferences
+spawn-at-startup "qs" "-c" "noctalia-shell"            // automatically start the shell
+spawn-at-startup "fish" "-c" "fish_add_path" "~/bin/"  // add ~/bin to fish on startup (hack for now)
 
 //==============||
 //   Services   ||
