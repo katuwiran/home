@@ -5,7 +5,7 @@
 //    ┛
 input {
     keyboard {
-        xkb { }
+        xkb { layout "us"; variant "altgr-intl"; }
         numlock // numlock on at startup
         repeat-delay 300
         repeat-rate 50
@@ -36,6 +36,6 @@ input {
     // focus-follows-mouse max-scroll-amount="100%" // Allow focus-follows-mouse always
     // workspace-auto-back-and-forth // disabling auto back and forth for now
 
-    mod-key "Super"      // possible values: Super, Alt, Mod3, Mod5, Ctrl, Shift
-    mod-key-nested "Alt" // possible values: Super, Alt, Mod3, Mod5, Ctrl, Shift
+    mod-key "Mod5"        // my windows key broke.
+    mod-key-nested "Alt"  // remapped LAlt as AltGr. RAlt as LAlt. Life is good.
 }
