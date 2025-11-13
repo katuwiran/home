@@ -18,4 +18,15 @@ spawn-sh-at-startup "swww-daemon &"
 spawn-sh-at-startup "hyprlax $RIKAI/Files/Wallpaper/Landscape/pexels-invisiblepower-1076885.jpg"
 spawn-sh-at-startup "awatcher &"  // launches awatcher server
 spawn-sh-at-startup "systemctl --user start hyprpolkitagent" // launchers authentication agent
-spawn-sh-at-startup "systemctl --user start vikunja" // launchers authentication agent
+spawn-sh-at-startup "systemctl --user start vikunja"
+spawn-sh-at-startup "systemctl --user start opentabletdriver" // tablet
+
+//==============||
+//   Services   ||
+//==============||
+spawn-sh-at-startup "digitalclock5 &"
+spawn-sh-at-startup "logseq &"
+spawn-sh-at-startup "vikunja &"
+spawn-sh-at-startup "wnr &"
+spawn-sh-at-startup "com.github.kolcha.DigitalClock5 &"
+spawn-sh-at-startup "vja -u lh -p lh ls" // initializing vja
