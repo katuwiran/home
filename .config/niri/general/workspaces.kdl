@@ -1,13 +1,15 @@
 
+workspace "dashboard"
 workspace "terminals"
 workspace "references"
 workspace "programming"
 workspace "endeavors"
-workspace "recreation"
+workspace "recreation" { layout { gaps 0; }; }
 
 binds {
 	// For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
+    Mod+Grave { focus-workspace "dashboard"; }
     Mod+1 { focus-workspace "terminals"; }
     Mod+2 { focus-workspace "references"; }
     Mod+3 { focus-workspace "programming"; }
@@ -19,6 +21,7 @@ binds {
     Mod+9 { focus-workspace 9; }
     Mod+0 { focus-workspace 10; }
 
+    Mod+Shift+Grave { move-column-to-workspace "dashboard"; }
     Mod+Shift+1 { move-column-to-workspace "terminals"; }
     Mod+Shift+2 { move-column-to-workspace "references"; }
     Mod+Shift+3 { move-column-to-workspace "programming"; }
