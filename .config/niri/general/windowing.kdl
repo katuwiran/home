@@ -61,6 +61,13 @@ window-rule {
 
 // `terminals` workspace. window rules don't work if you change the title, so...
 window-rule {
+	open-on-workspace "dashboard"
+
+	match app-id="vikunja"
+}
+
+// `terminals` workspace. window rules don't work if you change the title, so...
+window-rule {
 	open-on-workspace "terminals"
 
 	match title="btop"
@@ -73,7 +80,6 @@ window-rule {
 
 	match app-id="firefox"
 	match app-id="okular"
-	match app-id="krita"
 }
 
 //  `programming` workspace.
@@ -83,6 +89,9 @@ window-rule {
 	match app-id="dev.zed.Zed-Preview"
 	match app-id="smerge"
 	match app-id="subl"
+	match app-id="sqlitebrowser"
+	match app-id="jetbrains-rider"
+	match app-id="krita"
 }
 
 //  `endeavors` workspace.
@@ -91,8 +100,7 @@ window-rule {
 
 	match app-id="zoom"
 	match app-id="Logseq"
-	match app-id="vikunja"
-	match app-id="krita"
+	match app-id="qBittorent"
 }
 
 //  `recreation` workspace.
@@ -102,6 +110,7 @@ window-rule {
 	match app-id="easyeffects"
 	match app-id="vesktop"
 	match app-id="foobar2000.exe"
+	match app-id="Caprine"
 }
 
 //==========================||
@@ -112,8 +121,16 @@ window-rule {
 window-rule {
 	// Open the Firefox picture-in-picture player as floating by default.
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
+    match app-id=r#"firefox$"# title=r#"Torrents[^\n]Firefox"#
+    match app-id=r#"firefox$"# title=r#"Mozilla Firefox"#
+    open-fullscreen false
+	open-maximized false
+	open-floating true
 }
+
+// qBittorent
+window-rule { match app-id="org.qbittorrent.qBittorrent" title="qBittorrent"; open-floating false; }
+window-rule { match app-id="org.qbittorrent.qBittorrent"; open-floating true; }
 
 // Alacritty
 window-rule {
@@ -125,24 +142,51 @@ window-rule {
 // foobar2000
 window-rule {
 	match app-id="foobar2000.exe"
-	open-fullscreen true
+	geometry-corner-radius 0
+	open-fullscreen false
+	open-maximized false
+    open-maximized-to-edges false
+	open-floating false
+
+	focus-ring { off; }
+	border { off; }
+	shadow { off; }
+}
+window-rule {
+	match app-id="foobar2000.exe" title="Playlist Manager"
 	open-floating true
+}
+
+// krita
+window-rule {
+	match title="Create new document"
+	match app-id="krita"
+	open-maximized true
+	open-fullscreen true
+	open-floating false
+	open-focused true
 
 	focus-ring { off; }
 	border { off; }
 	shadow { off; }
 }
 
-// krita
 window-rule {
-	match app-id="krita"
-	open-maximized true
-	open-fullscreen true
+	match title="— Krita"
+	// match app-id="krita"
+	open-fullscreen false
+	open-maximized false
 	open-floating true
 
-	focus-ring { off; }
-	border { off; }
-	shadow { off; }
+	default-floating-position x=0 y=0 relative-to="bottom"
+	// min-height 600
+	// min-width 250
+}
+
+window-rule {
+	match app-id="com.github.kolcha.DigitalClock5"
+
+
 }
 
 //==========================||
@@ -164,15 +208,33 @@ window-rule {
 
 // zoom
 window-rule {
-	match title="meeting bottombar popup"
+	match app-id="zoom" 	title="meeting bottombar popup"
+	match app-id="zoom" title="zoom"
 	open-floating true
 	focus-ring { off; }
 	border { off; }
 	shadow { off; }
 }
 
-// window-rule {
-// 	match app-id=""
-// 	open-maximized false
-// 	default-column-width { proportion 0.3; }
-// }
+// file managers: dolphin, fileroller
+window-rule {
+	match app-id="org.kde.dolphin"
+	match app-id="FileRoller"
+	open-maximized false
+	open-maximized-to-edges false
+	open-fullscreen false
+}
+
+// file pickers
+window-rule {
+	match app-id="org.freedesktop.impl.portal.desktop.kde"
+	open-maximized false
+	open-maximized-to-edges false
+	open-fullscreen false
+	open-floating true
+}
+
+window-rule {
+	match app-id="dndlauncher.exe" title="Dungeons & Dragons Online"
+	open-floating false
+}
