@@ -26,11 +26,17 @@ environment {
     WINEARCH "wow64"
     WINEPREFIX "/home/rikai/.local/share/wineprefixes/foobar2000"
 
-    // Folders
-    Rikai "/mnt/Rikai"
+    // Linux Folders
+    HOME "/home/rikai"
+    CONFIG "/home/rikai/.config"
+    BIN "/home/rikai/BIN"
+
+    // NTFS Folders
+    RIKAI "/mnt/Rikai"
     WINDOWS "/mnt/Windows"
     RIDER_PROJECTS "/mnt/Rikai/Projects/Rider/"
     INTELLIJ_PROJECTS "/mnt/Rikai/Projects/Rider/"
+    FILES "/mnt/Rikai/Files"
 
     //dotnet
     DOTNET_CLI_TELEMETRY_OPTOUT "1"
