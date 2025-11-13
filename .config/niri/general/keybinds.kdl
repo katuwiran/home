@@ -6,7 +6,7 @@
 binds {
 
 	Alt+Tab { focus-window-previous; }
-	Alt+F4 { close-window; }
+	Mod+Ctrl+Tab { focus-window-previous; }
 	Mod+F4 { close-window; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -59,7 +59,9 @@ binds {
     Mod+WheelScrollUp         cooldown-ms=50 { focus-column-left; }        // I don't know why. My brain just prefers it this way.
     Mod+WheelScrollDown       cooldown-ms=50 { focus-column-right; }       // Horizontal nav is much more conceptually related
     Mod+Shift+WheelScrollUp   cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
+    Mod+MouseForward          cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
     Mod+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
+    Mod+MouseBack             cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
     Mod+Ctrl+Shift+Up   { move-workspace-up; }
     Mod+Ctrl+Shift+Down { move-workspace-down; }
 
@@ -71,7 +73,7 @@ binds {
     //
 
 
-    Mod+Grave { focus-workspace-previous; } // Switches focus between the current and the previous workspace.
+    Mod+Ctrl+Grave { focus-workspace-previous; } // Switches focus between the current and the previous workspace.
 
     // Row manipulations
     Mod+BracketLeft  { consume-or-expel-window-left; }      // I only really use rows on terminals (small screen)
@@ -144,4 +146,12 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
+    Mod+F2 { focus-monitor "eDP-1"; }
+    Mod+F3 { focus-monitor "DP-1"; }
+    Mod+Shift+F2 { move-column-to-monitor "eDP-1"; }
+    Mod+Shift+F3 { move-column-to-monitor "DP-1"; }
+    Mod+Shift+Ctrl+F2 { move-workspace-to-monitor "eDP-1"; }
+    Mod+Shift+Ctrl+F3 { move-workspace-to-monitor "DP-1"; }
+
 }
