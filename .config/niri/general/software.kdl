@@ -15,7 +15,7 @@ binds {
 
 
 	Mod+Shift+Q { spawn "zeditor"; }
-    Mod+Shift+W { spawn-sh "firefox &; sleep 0.2; niri msg action toggle-window-floating"; }
+    Mod+Shift+W { spawn-sh "firefox & sleep 3; niri msg action toggle-window-floating"; }
     Mod+Shift+E { spawn "dolphin"; } // file manager
     Mod+Shift+R { spawn "rider"; }
     Mod+Shift+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
