@@ -10,6 +10,8 @@
 spawn-at-startup "bash" "-c" "kbuildsycoca6"           // to generate dolphin's application preferences
 spawn-at-startup "qs" "-c" "noctalia-shell"            // automatically start the shell
 spawn-at-startup "fish" "-c" "fish_add_path" "~/bin/"  // add ~/bin to fish on startup (hack for now)
+spawn-at-startup "fish" "-c" "fish_add_path" "~/context/tex/texmf-linux-64/bin"  // add ~/bin to fish on startup (hack for now)
+
 
 //==============||
 //   Services   ||
@@ -17,16 +19,15 @@ spawn-at-startup "fish" "-c" "fish_add_path" "~/bin/"  // add ~/bin to fish on s
 spawn-sh-at-startup "swww-daemon &"
 spawn-sh-at-startup "hyprlax $RIKAI/Files/Wallpaper/Landscape/pexels-invisiblepower-1076885.jpg"
 spawn-sh-at-startup "awatcher &"  // launches awatcher server
-spawn-sh-at-startup "systemctl --user start hyprpolkitagent" // launchers authentication agent
+spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // launchers authentication agent
 spawn-sh-at-startup "systemctl --user start vikunja"
 spawn-sh-at-startup "systemctl --user start opentabletdriver" // tablet
 
-//==============||
-//   Services   ||
-//==============||
+//==================||
+//   Applications   ||
+//==================||
 spawn-sh-at-startup "digitalclock5 &"
 spawn-sh-at-startup "logseq &"
-spawn-sh-at-startup "vikunja &"
 spawn-sh-at-startup "wnr &"
-spawn-sh-at-startup "com.github.kolcha.DigitalClock5 &"
+spawn-sh-at-startup "$RIKAI/Config/Linux/Vikunja-patched.AppImage";
 spawn-sh-at-startup "vja -u lh -p lh ls" // initializing vja
