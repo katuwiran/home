@@ -52,6 +52,7 @@ window-rule {
 // open floating
 window-rule {
 	match app-id="com.github.kolcha.DigitalClock5"
+	match app-id="pomodorolm"
 	open-floating true
 }
 
@@ -64,6 +65,7 @@ window-rule {
 	open-on-workspace "dashboard"
 
 	match app-id="vikunja"
+	match app-id="pomodorolm"
 }
 
 // `terminals` workspace. window rules don't work if you change the title, so...
@@ -116,6 +118,40 @@ window-rule {
 //==========================||
 //   Application Specific   ||
 //==========================||
+
+// Pomodoro
+ window-rule {
+	match app-id="pomodorolm"
+
+	open-fullscreen false
+	open-maximized false
+	default-window-height { fixed 280; }
+	default-column-width { fixed 210; }
+	default-floating-position x=30 y=30 relative-to="top-right"
+ }
+
+
+// Vikunja
+window-rule {
+	match app-id="vikunja-desktop"
+
+    open-fullscreen false
+	open-maximized false
+	open-floating true
+	default-window-height { fixed 1016; }
+    default-column-width { fixed 900; }
+    default-floating-position x=30 y=30 relative-to="bottom-left"
+}
+
+// DigitalClock5
+window-rule {
+	match app-id="com.github.kolcha.DigitalClock5"
+
+    open-fullscreen false
+	open-maximized false
+	open-floating true
+    default-floating-position x=1209 y=33
+}
 
 // Firefox
 window-rule {
