@@ -9,5 +9,5 @@ spawn-at-startup "~/bin/nsticky"
 // I duplicated the values so they can still be modular.
 // but I seriously wish keybinds are a many to many relationship :(
 binds {
-	Mod+Y { spawn-sh "~/bin/ns.py -id wnr; sleep 0.1; ~/bin/nsticky toggle-active; notify-send \"uwu\" \"uwu\""; }
+	Mod+Shift+Y { spawn-sh "~/bin/nsticky toggle-active;"; }
 }
