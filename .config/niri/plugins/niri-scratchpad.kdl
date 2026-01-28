@@ -6,18 +6,30 @@
 workspace "scratch"
 spawn-sh-at-startup "alacritty --class \"scratchpad\""
 
+// alacritty
 window-rule {
     match app-id="scratchpad"
+
     open-on-workspace "scratch"
     open-floating true
+    default-window-height { fixed 650; }
+    default-column-width { fixed 950; }
 }
 
+// rssguard
 window-rule {
-    match app-id="wnr"
-    open-on-workspace "scratch"
+	match app-id="io.github.martinrotter.rssguard"
+
+	open-on-workspace "scratch"
     open-floating true
+    default-window-height { fixed 900; }
+    default-column-width { fixed 1360; }
 }
 
 binds {
-	Mod+T { spawn-sh "~/bin/ns.py -id scratchpad"; };
+	Mod+T { spawn-sh "$HOME/bin/ns.py -id scratchpad"; };
+	Mod+P { spawn-sh "$HOME/bin/ns.py -id io.github.martinrotter.rssguard"; };
+
+	Ctrl+Mod+Shift+T { spawn-sh r#"alacritty --class "scratchpad" & sleep 0.01; $HOME/bin/ns.py -id scratchpad "#; } // in case I accidentally kill the floating terminal :)
+	Ctrl+Mod+Shift+P { spawn-sh r#"rssguard & sleep 0.01; $HOME/bin/ns.py -id scratchpad "#; } // in case I accidentally kill the floating terminal :)
 }
