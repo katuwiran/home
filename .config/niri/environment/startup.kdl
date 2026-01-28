@@ -30,4 +30,4 @@ spawn-sh-at-startup "digitalclock5 &"
 spawn-sh-at-startup "logseq &"
 spawn-sh-at-startup "wnr &"
 spawn-sh-at-startup "$RIKAI/Config/Linux/Vikunja-patched.AppImage";
-spawn-sh-at-startup "vja -u lh -p lh ls" // initializing vja
+spawn-at-startup    "sleep 5; rssguard &"
