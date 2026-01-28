@@ -3,6 +3,16 @@
 **/systemd/user/graphical-session.target.wants
 **/systemd/user/multi-user.target.wants
 **/systemd/user/sockets.target.wants
+**/systemd/user/aw-server.service
+**/systemd/user/pulseaudio.service
 
 # vja
 .vjacli/token.json
+
+# csharp scripts
+**/rikai
+
+# binaries
+**/bin/niriutils
+**/bin/nsticky
+**/bin/vjawrapper
