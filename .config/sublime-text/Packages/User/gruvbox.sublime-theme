@@ -1,0 +1,18 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+	"variables":
+	{
+		"border": "color(var(bg) l(- 10%))",
+		"container": "var(--background)",
+		"panelRow": "color(var(bg) l(+ 2.35%))",
+		"borderSofter": "color(var(bg) l(- 10%))",
+		"containerSofter": "color(var(bg) l(+ 2.8%))",
+	},
+	"rules":
+	[
+		{
+			"class": "puck_control", // todo: create a separate minimalist "distraction free"
+			"content_margin": 0
+		},
+	],
+}
