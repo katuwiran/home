@@ -7,6 +7,7 @@ binds {
 
 	Alt+Tab { focus-window-previous; }
 	Mod+Ctrl+Tab { focus-window-previous; }
+	// Mod+Ctrl+Tab { next-window; }
 	Mod+F4 { close-window; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -21,10 +22,14 @@ binds {
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioNext   { spawn "playerctl" "next"; }
+    XF86AudioPrev   { spawn "playerctl" "previous"; }
+    XF86AudioPlay   { spawn "playerctl" "play-pause"; }
+    XF86AudioStop   { spawn "playerctl" "stop"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
