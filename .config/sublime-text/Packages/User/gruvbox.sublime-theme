@@ -2,11 +2,12 @@
 {
 	"variables":
 	{
-		"border": "color(var(bg) l(- 10%))",
+		// "border": "color(var(bg) l(- 10%))",
 		"container": "var(--background)",
-		"panelRow": "color(var(bg) l(+ 2.35%))",
-		"borderSofter": "color(var(bg) l(- 10%))",
-		"containerSofter": "color(var(bg) l(+ 2.8%))",
+		// "panelRow": "color(var(highlight-low))",
+		"panelRow": "color(var(--cyanish) alpha(0.1))",
+		// "borderSofter": "color(var(bg) l(- 10%))",
+		// "containerSofter": "color(var(bg) l(+ 2.8%))",
 	},
 	"rules":
 	[
@@ -14,5 +15,38 @@
 			"class": "puck_control", // todo: create a separate minimalist "distraction free"
 			"content_margin": 0
 		},
+		// sidebar stuff
+		{
+    	    "class": "sidebar_label",
+    	    "color": "color(var(--foreground))", // RGB for White
+    	    "font.size": 13,
+    	    "font.bold": false,
+    	    "font.italic": false
+    	},
+    	{
+    	    "class": "sidebar_label",
+    	    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+    	    "color": "color(var(--cyanish))" // Color when a file is selected
+    	},
+    	{
+            "class": "sidebar_label",
+            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+            "color": "var(--redish)" 
+        },
+        // // panel rows stuff
+        // {
+        //     "class": "tree_row",
+        //     "parents": [{"class": "quick_panel"}],
+        //     "attributes": ["selected"],
+        //     // This is the background color of the highlighted option
+        //     "layer0.tint": "var(--redish)", 
+        //     "layer0.opacity": 1.0
+        // },
+        // {
+        //     "class": "quick_panel_label",
+        //     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        //     // This is the text color of the highlighted option
+        //     "color": "var(--redish)" 
+        // }
 	],
 }
