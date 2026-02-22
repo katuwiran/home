@@ -1,50 +1,50 @@
 {
+	"caret_extra_width": 1,
+	"caret_style": "blink",
 	"color_scheme": "Skylight.sublime-color-scheme",
 	"dark_color_scheme": "Moonlight.sublime-color-scheme",
-	"light_color_scheme": "Catppuccin Latte.sublime-color-scheme",
+	"font_face": "IosevkaRikai Nerd Font",
 	"font_size": 15,
+	"gruvbox_accent_blue": true,
+	"gruvbox_animate_icons": true,
+	"gruvbox_autocomplete_border": true,
+	"gruvbox_buttons_bold": true,
+	"gruvbox_colored_tooltips": true,
+	"gruvbox_command_palette_cramped": true,
+	"gruvbox_disable_borders": true,
+	"gruvbox_disable_command_palette_row_border": true,
+	"gruvbox_disable_greyscale": true,
+	"gruvbox_enable_pane_borders": true,
+	"gruvbox_enable_panel_close_button": true,
+	"gruvbox_enable_sidebar_border": true,
+	"gruvbox_enable_statusbar_border": true,
+	"gruvbox_enable_tab_borders": true,
+	"gruvbox_highlight_active_buttons": true,
+	"gruvbox_highlight_active_tree_row": true,
+	"gruvbox_iconset_thick": true,
+	"gruvbox_panel_xs": true,
+	"gruvbox_scrollbar_width_xs": true,
+	"gruvbox_sidebar_compact": true,
+	"gruvbox_sidebar_font_size_12": true,
+	"gruvbox_sidebar_heading_bold": true,
+	"gruvbox_sidebar_indent_s": true,
+	"gruvbox_sidebar_label_bold": false,
+	"gruvbox_sideline_command_palette_row_thick": true,
+	"gruvbox_statusbar_bold": true,
+	"gruvbox_statusbar_font_size_12": true,
+	"gruvbox_statusbar_xs": true,
+	"gruvbox_tabs_bold": true,
+	"gruvbox_tabs_xxs": true,
+	"hide_menu": true,
 	"ignored_packages":
 	[
 		"Vintage",
 	],
-	"theme": "gruvbox.sublime-theme",
-	"font_face": "IosevkaRikai Nerd Font",
 	"index_files": true,
-	"hide_menu": true,
-	"use_custom_title_bar": true,
+	"light_color_scheme": "Catppuccin Latte.sublime-color-scheme",
 	"overlay_scroll_bars": "disabled",
-	"caret_style": "blink",
-	"caret_extra_width": 1,
-	"wrap_width": 120,
+	"theme": "gruvbox.sublime-theme",
+	"use_custom_title_bar": true,
 	"word_wrap": "false",
-	"gruvbox_accent_blue": true,    // uses the bluish color from the color scheme
-	"gruvbox_autocomplete_border": true,
-	"gruvbox_sidebar_compact": true,
-	"gruvbox_sidebar_indent_s": true,
-	"gruvbox_sidebar_font_size_12": true,
-	"gruvbox_sidebar_heading_bold": true,
-	"gruvbox_sidebar_label_bold": false,
-	"gruvbox_command_palette_cramped": true,
-	"gruvbox_sideline_command_palette_row_thick": true, 
-	"gruvbox_statusbar_xs": true,
-	"gruvbox_statusbar_font_size_12": true,
-	"gruvbox_tabs_xxs": true,
-	"gruvbox_panel_xs": true,
-	"gruvbox_scrollbar_width_xs": true,
- 	"gruvbox_disable_borders": true,                     // Disable all borders
- 	"gruvbox_enable_pane_borders": true,                 // Enable borders between panes
- 	"gruvbox_enable_sidebar_border": true,               // Enable the sidebar border
- 	"gruvbox_enable_statusbar_border": true,             // Enable borders for the status bar
- 	"gruvbox_enable_tab_borders": true,                  // Enable borders for the tabs
- 	"gruvbox_disable_command_palette_row_border": true,  // Disable Command Palette row borders
- 	"gruvbox_iconset_thick": true,
-	"gruvbox_animate_icons": true,              // Enable icon animations
-	"gruvbox_buttons_bold": true,               // Enable bold button labels
-	"gruvbox_colored_tooltips": true,           // Color the tooltip backgrounds with the current accent color
-	"gruvbox_disable_greyscale": true,          // Use gruvbox colors instead of greyscale colors for certain text
-	"gruvbox_enable_panel_close_button": true,  // Enable the panel close button
-	"gruvbox_highlight_active_buttons": true,   // Highlight selected buttons in the Find & Replace panel
-	"gruvbox_highlight_active_tree_row": true,  // Highlight the active file in the sidebar tree
-	"gruvbox_statusbar_bold": true,             // Enable bold status bar labels
-	"gruvbox_tabs_bold": true,                  // Enable bold tabs
+	"wrap_width": 120,
 }
