@@ -9,7 +9,7 @@
 clear_on_pause = true
 
 # How often to update Discord presence (in milliseconds)
-interval = 500
+interval = 250
 
 # ------------------
 # Display Template
@@ -25,7 +25,7 @@ state = "{{{artist_display}}}"
 
 # Text shown when hovering over the large image
 # For "listening" activity type: Shows as third line
-large_text = "{{#if album}}{{{album}}}{{#if year}} ({{{year}}}){{/if}}{{#if album_artist_display}} by {{{album_artist_display}}}{{/if}}{{/if}}"
+large_text = "{{#if album}}{{{album}}}{{#if year}} ({{{year}}}){{/if}}{{/if}}"
 
 # Text shown when hovering over the small image (player icon)
 # Only visible when show_icon = true
