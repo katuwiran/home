@@ -6,10 +6,10 @@
 # Basic Settings
 # ------------------
 # Whether to clear Discord activity when media is paused
-clear_on_pause = true
+clear_on_pause = false
 
 # How often to update Discord presence (in milliseconds)
-interval = 250
+interval = 500
 
 # ------------------
 # Display Template
@@ -144,21 +144,21 @@ provider = ["imgbb"]
 [cover.provider.imgbb]
 # Your ImgBB API key (required to use the imgbb provider).
 # Obtain from https://api.imgbb.com/
-api_key = "b39234ee24bd8bc99af9ea4fa5eda1ec"
+api_key = "5020f80b6c3f9de1e1eb9dcc24c68cba"
 
 # Expiration time in seconds for images uploaded to ImgBB.
 # 0 means the image never expires.
-expiration = 8640 # 24 hours
+expiration = 86400 # 24 hours
 
 [cover.provider.musicbrainz]
 # Minimum score (0-100) required for a MusicBrainz result to be considered valid.
 # Higher values mean stricter matching, lower values allow more potential matches and are more likely to be false positives.
-min_score = 95
+min_score = 98
 
 # ------------------
 # Player Settings
 # ------------------
-[player]
+[player.default]
 # Default configuration for all players
 # Fields:
 #   ignore: Don't show rich presence for this player
@@ -175,11 +175,14 @@ min_score = 95
 # Each player can override any of the default settings above
 # Example for VLC Media Player:
 [player.vlc_media_player]
-app_id = "1124968989538402334"
-icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/VLC_Icon.svg/1200px-VLC_Icon.svg.png"
+# app_id = "1124968989538402334"
+# icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/VLC_Icon.svg/1200px-VLC_Icon.svg.png"
+app_id = "919597629531381770"
+icon = "https://cdn.discordapp.com/app-icons/919597629531381770/e07a08a3aa9c6c63d391f7d412d45492.png"
 show_icon = true
-allow_streaming = true
-override_activity_type = "watching"
+# allow_streaming = true
+# override_activity_type = "watching"
+status_display_type = "details"
 
 # You can add more player-specific configurations below, like:
 # [player.spotify]
@@ -195,11 +198,13 @@ override_activity_type = "watching"
 show_icon = true
 app_id = "919597629531381770"
 icon = "https://cdn.discordapp.com/app-icons/919597629531381770/e07a08a3aa9c6c63d391f7d412d45492.png"
+status_display_type = "details"
 
 [player.fooyin]
 show_icon = true
 app_id = "919597629531381770"
 icon = "https://cdn.discordapp.com/app-icons/919597629531381770/e07a08a3aa9c6c63d391f7d412d45492.png"
+status_display_type = "details"
 
 # [player.audacious]
 # app_id = "1125084572166656031"
