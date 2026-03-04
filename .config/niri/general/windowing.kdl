@@ -82,6 +82,9 @@ window-rule {
 
 	match app-id="firefox"
 	match app-id="okular"
+	match app-id="sqlitebrowser"
+	match app-id="SourceGit"
+	match app-id="calibre-gui"
 }
 
 //  `programming` workspace.
