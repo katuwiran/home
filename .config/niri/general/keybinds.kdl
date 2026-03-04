@@ -55,13 +55,13 @@ binds {
 
     // workspace navigation
     Mod+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
+    Alt+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
     Mod+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
+    Alt+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
     Mod+Up    { focus-workspace-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
+    Alt+Up    { focus-workspace-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
     Mod+Down  { focus-workspace-down; }
-    Mod+Alt+Up    { focus-window-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
-    Mod+Alt+Down  { focus-window-down; }
-    Mod+Alt+Left  { focus-column-left; }       // (since my default window sizes are either 0.5 or 1 screenful)
-    Mod+Alt+Right { focus-column-right; }
+    Alt+Down  { focus-workspace-down; }
 
     // move windows across the desktop, best used in overview mode ;)
     Mod+Ctrl+Left  { move-column-left; }
