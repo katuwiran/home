@@ -93,6 +93,7 @@ window-rule {
 	match app-id="subl"
 	match app-id="sqlitebrowser"
 	match app-id="jetbrains-rider"
+	match app-id="jetbrains-idea"
 	match app-id="krita"
 }
 
@@ -189,10 +190,18 @@ window-rule {
 	open-fullscreen false
 	open-maximized false
 	open-floating true
+}
 
-	default-floating-position x=0 y=0 relative-to="bottom"
-	// min-height 600
-	// min-width 250
+window-rule {
+	// match app-id="jetbrains-rider" title=""
+	match app-id="jetbrains-rider" title="(unset)"
+
+	open-floating true
+	open-fullscreen false
+	open-maximized false
+
+	default-window-height { fixed 700; }
+    default-column-width { fixed 700; }
 }
 
 window-rule {
