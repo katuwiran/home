@@ -148,7 +148,7 @@ api_key = "5020f80b6c3f9de1e1eb9dcc24c68cba"
 
 # Expiration time in seconds for images uploaded to ImgBB.
 # 0 means the image never expires.
-expiration = 86400 # 24 hours
+expiration = 172800 # 48 hours
 
 [cover.provider.musicbrainz]
 # Minimum score (0-100) required for a MusicBrainz result to be considered valid.
