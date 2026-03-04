@@ -119,30 +119,6 @@ window-rule {
 //   Application Specific   ||
 //==========================||
 
-// Pomodoro
- window-rule {
-	match app-id="pomodorolm"
-
-	open-fullscreen false
-	open-maximized false
-	default-window-height { fixed 280; }
-	default-column-width { fixed 210; }
-	default-floating-position x=30 y=30 relative-to="top-right"
- }
-
-
-// Vikunja
-window-rule {
-	match app-id="vikunja-desktop"
-
-    open-fullscreen false
-	open-maximized false
-	open-floating true
-	default-window-height { fixed 1016; }
-    default-column-width { fixed 900; }
-    default-floating-position x=30 y=30 relative-to="bottom-left"
-}
-
 // DigitalClock5
 window-rule {
 	match app-id="com.github.kolcha.DigitalClock5"
