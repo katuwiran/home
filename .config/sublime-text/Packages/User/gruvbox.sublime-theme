@@ -2,11 +2,11 @@
 {
 	"variables":
 	{
-		// "border": "color(var(bg) l(- 10%))",
+		"border": "color(var(bg) l(- 3.5%))",
 		"container": "var(--background)",
 		// "panelRow": "color(var(highlight-low))",
 		"panelRow": "color(var(--cyanish) alpha(0.1))",
-		// "borderSofter": "color(var(bg) l(- 10%))",
+		"borderSofter": "color(var(bg))",
 		// "containerSofter": "color(var(bg) l(+ 2.8%))",
 	},
 	"rules":
