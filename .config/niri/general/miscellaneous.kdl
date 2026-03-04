@@ -26,6 +26,6 @@ debug {
 }
 
 layer-rule {
-	match namespace="swww"
+	match namespace="hyprlax"
     place-within-backdrop true
 }

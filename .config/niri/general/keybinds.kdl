@@ -71,13 +71,21 @@ binds {
 
     // workspace navigation (mouse)
     Mod+WheelScrollUp         cooldown-ms=50 { focus-column-left; }        // I don't know why. My brain just prefers it this way.
+    Alt+WheelScrollUp         cooldown-ms=50 { focus-column-left; }        // I don't know why. My brain just prefers it this way.
     Mod+WheelScrollDown       cooldown-ms=50 { focus-column-right; }       // Horizontal nav is much more conceptually related
+    Alt+WheelScrollDown       cooldown-ms=50 { focus-column-right; }       // Horizontal nav is much more conceptually related
     Mod+Shift+WheelScrollUp   cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
+    Alt+Shift+WheelScrollUp   cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
     Mod+MouseForward          cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
+    Alt+MouseForward          cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
     Mod+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
+    Alt+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
     Mod+MouseBack             cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
+    Alt+MouseBack             cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
     Mod+Ctrl+Shift+Up   { move-workspace-up; }
+    Alt+Ctrl+Shift+Up   { move-workspace-up; }
     Mod+Ctrl+Shift+Down { move-workspace-down; }
+    Alt+Ctrl+Shift+Down { move-workspace-down; }
 
     // You can refer to workspaces by index. However, keep in mind that
     // niri is a dynamic workspace system, so these commands are kind of
