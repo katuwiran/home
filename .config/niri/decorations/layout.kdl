@@ -9,6 +9,7 @@ layout {
     // center-focused-column "always" // always center
     center-focused-column "on-overflow" // only center when it doesn't fit on screen
     always-center-single-column
+    background-color "transparent"
 
     // widths for "switch-preset-column-width"
     preset-column-widths {
