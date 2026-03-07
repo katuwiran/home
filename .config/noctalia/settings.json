@@ -300,7 +300,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
         "animationDisabled": false,
-        "animationSpeed": 1,
+        "animationSpeed": 1.25,
         "autoStartAuth": false,
         "avatarImage": "/home/rikai/.face",
         "boxRadiusRatio": 1,
