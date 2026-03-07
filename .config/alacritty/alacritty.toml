@@ -1,0 +1,16 @@
+[terminal.shell]
+program = "/usr/bin/fish"
+args = ["-l"]
+
+[general]
+import = [
+"~/.config/alacritty/Moonlight.toml",
+]
+
+[window]
+padding = { x = 10, y = 5 }
+
+[font]
+normal = { family = "IosevkaRikai Nerd Font", style = "Regular" }
+size = 11
+builtin_box_drawing = true
