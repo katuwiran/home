@@ -1,0 +1,36 @@
+# Multi-layer depth parallax
+# Creates a rich depth effect with multiple layers
+
+[global]
+fps = 30
+debug = false
+duration = 0.5
+shift = 100   # Conservative shift to prevent edge smearing
+vsync = true
+easing = "expo"
+
+# Optional: Add subtle cursor influence
+[global.parallax]
+input = "workspace,cursor:0.2"   # Primarily workspace-driven
+
+[global.parallax.invert.cursor]
+y = false
+
+[global.parallax.invert.workspace]
+x = false
+y = true  # Set to true to invert the vertical movement
+
+[global.input.cursor]
+sensitivity_x = 0.5
+sensitivity_y = 0.3
+ema_alpha = 0.35          # Heavy smoothing
+
+# Layer 1: Far background (sky/stars)
+[[global.layers]]
+path = "/mnt/Rikai/Files/Wallpaper/Landscape/todd-diemer-67t2GJcD5PI-unsplash.jpg"
+shift_multiplier = 0.1
+opacity = 1.0
+# blur = 4.0
+fit = "cover"
+scale = 1.5
+align = { x = 0.53, y = 0.80 }
