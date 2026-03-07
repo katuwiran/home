@@ -36,7 +36,7 @@ binds {
     Mod+Shift+V { spawn "vesktop"; }
     Mod+Shift+B{ spawn "obs"; }
     Mod+Shift+N { spawn "easyeffects"; }
-    Mod+Shift+M { spawn-sh "beefweb_mpris"; }
+    Mod+Shift+M { spawn-sh "env PULSE_LATENCY_MSEC=250 beefweb_mpris"; }
 
     Mod+Q { spawn-sh "~/bin/niriutils focus -w dev.zed.Zed-Preview"; }
     Mod+W { spawn-sh "~/bin/niriutils focus -w firefox"; }
