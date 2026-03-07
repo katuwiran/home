@@ -343,9 +343,9 @@
         "lockScreenMonitors": [
         ],
         "lockScreenTint": 0,
-        "radiusRatio": 1,
+        "radiusRatio": 0.7000000000000001,
         "reverseScroll": false,
-        "scaleRatio": 0.9,
+        "scaleRatio": 0.9500000000000001,
         "screenRadiusRatio": 0,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
