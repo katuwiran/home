@@ -27,7 +27,7 @@ ema_alpha = 0.35          # Heavy smoothing
 
 # Layer 1: Far background (sky/stars)
 [[global.layers]]
-path = "/mnt/Rikai/Files/Wallpaper/Landscape/todd-diemer-67t2GJcD5PI-unsplash.jpg"
+path = "/mnt/Rikai/Files/Wallpaper/Landscape/todd-diemer-67t2GJcD5PI-adjusted.jpg"
 shift_multiplier = 0.1
 opacity = 1.0
 # blur = 4.0
