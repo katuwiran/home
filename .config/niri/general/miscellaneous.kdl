@@ -14,6 +14,9 @@ xwayland-satellite {
 }
 overview {
 	zoom 0.15
+	workspace-shadow {
+        off
+    }
 }
 
 // layer-rule {
