@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "default",
+        "density": "compact",
         "enableClipPreview": true,
         "enableClipboardHistory": false,
         "enableSessionSearch": true,
@@ -14,7 +14,7 @@
         "enableWindowsSearch": true,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "overviewLayer": false,
+        "overviewLayer": true,
         "pinnedApps": [
         ],
         "position": "center",
@@ -62,6 +62,12 @@
         "useSeparateOpacity": false,
         "widgets": {
             "center": [
+                {
+                    "colorName": "none",
+                    "hideWhenIdle": false,
+                    "id": "AudioVisualizer",
+                    "width": 200
+                }
             ],
             "left": [
                 {
@@ -71,19 +77,10 @@
                     "enableColorization": false,
                     "icon": "noctalia",
                     "id": "ControlCenter",
-                    "useDistroLogo": false
+                    "useDistroLogo": true
                 },
                 {
-                    "deviceNativePath": "__default__",
-                    "displayMode": "onhover",
-                    "hideIfIdle": false,
-                    "hideIfNotDetected": true,
-                    "id": "Battery",
-                    "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false
-                },
-                {
-                    "characterCount": 2,
+                    "characterCount": 1,
                     "colorizeIcons": false,
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
@@ -100,6 +97,15 @@
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
+                },
+                {
+                    "clockColor": "none",
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "MM dd - HH mm ss",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": false
                 },
                 {
                     "compactMode": false,
@@ -121,13 +127,13 @@
                     "visualizerType": "linear"
                 },
                 {
-                    "clockColor": "none",
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "MM dd - HH mm ss",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
+                    "deviceNativePath": "BAT1",
+                    "displayMode": "icon-hover",
+                    "hideIfIdle": false,
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": true
                 }
             ],
             "right": [
@@ -302,12 +308,12 @@
         "animationDisabled": false,
         "animationSpeed": 1.25,
         "autoStartAuth": false,
-        "avatarImage": "/home/rikai/.face",
+        "avatarImage": "/mnt/Rikai/Files/Pictures/Profile Pictures/haru.png",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.2,
+        "dimmerOpacity": 0.47000000000000003,
         "enableLockScreenCountdown": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
@@ -346,7 +352,7 @@
         "radiusRatio": 0.7000000000000001,
         "reverseScroll": false,
         "scaleRatio": 0.9500000000000001,
-        "screenRadiusRatio": 0,
+        "screenRadiusRatio": 1,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
         "shadowOffsetY": 3,
@@ -372,7 +378,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Tokyo",
+        "name": "Manila",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": true,
@@ -515,7 +521,7 @@
         "batteryWarningThreshold": 20,
         "cpuCriticalThreshold": 90,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#f04f4e",
         "diskAvailCriticalThreshold": 10,
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
@@ -531,7 +537,7 @@
         "tempCriticalThreshold": 90,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
-        "warningColor": ""
+        "warningColor": "#e3e9ed"
     },
     "templates": {
         "activeTemplates": [
@@ -547,9 +553,9 @@
         "fontFixed": "Fira Code",
         "fontFixedScale": 1,
         "networkPanelView": "wifi",
-        "panelBackgroundOpacity": 0.93,
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
-        "settingsPanelMode": "attached",
+        "settingsPanelMode": "centered",
         "tooltipsEnabled": true,
         "wifiDetailsViewMode": "grid"
     },
