@@ -85,6 +85,7 @@ window-rule {
 	match app-id="sqlitebrowser"
 	match app-id="SourceGit"
 	match app-id="calibre-gui"
+	match app-id="qdirstat"
 }
 
 //  `programming` workspace.
