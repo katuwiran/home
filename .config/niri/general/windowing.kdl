@@ -118,6 +118,7 @@ window-rule {
 	match app-id="vesktop"
 	match app-id="foobar2000.exe"
 	match app-id="Caprine"
+	match app-id="steam"
 }
 
 //==========================||
