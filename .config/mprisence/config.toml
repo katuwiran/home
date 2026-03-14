@@ -182,7 +182,8 @@ icon = "https://cdn.discordapp.com/app-icons/919597629531381770/e07a08a3aa9c6c63
 show_icon = true
 # allow_streaming = true
 # override_activity_type = "watching"
-status_display_type = "details"
+# status_display_type = "details"
+ignore = true
 
 # You can add more player-specific configurations below, like:
 # [player.spotify]
