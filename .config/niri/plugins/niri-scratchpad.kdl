@@ -12,6 +12,7 @@ window-rule {
 
     open-on-workspace "scratch"
     open-floating true
+    open-focused false
     default-window-height { fixed 650; }
     default-column-width { fixed 950; }
 }
@@ -22,14 +23,27 @@ window-rule {
 
 	open-on-workspace "scratch"
     open-floating true
+    open-focused false
     default-window-height { fixed 900; }
     default-column-width { fixed 1360; }
 }
 
+// artha
+window-rule {
+	match app-id="Artha"
+
+	open-on-workspace "scratch"
+    open-floating true
+    open-focused false
+    default-window-height { fixed 900; }
+    default-column-width { fixed 600; }
+}
+
+
 binds {
 	Mod+T { spawn-sh "$HOME/bin/ns.py -id scratchpad"; };
 	Mod+P { spawn-sh "$HOME/bin/ns.py -id io.github.martinrotter.rssguardlite"; };
+	Mod+BracketLeft { spawn-sh "$HOME/bin/ns.py -id Artha"; };
 
 	Ctrl+Mod+Shift+T { spawn-sh r#"alacritty --class "scratchpad" & sleep 0.01; $HOME/bin/ns.py -id scratchpad "#; } // in case I accidentally kill the floating terminal :)
-	Ctrl+Mod+Shift+P { spawn-sh r#"rssguard & sleep 0.01; $HOME/bin/ns.py -id scratchpad "#; } // in case I accidentally kill the floating terminal :)
 }
