@@ -1,67 +1,52 @@
 
 // ┓┏┓    ┓ •   ┓
-// ┃┫ ┏┓┓┏┣┓┓┏┓┏┫┏     Keybinds and Software picks
+// ┃┫ ┏┓┓┏┣┓┓┏┓┏┫┏     Vanilla Niri Keybinds
 // ┛┗┛┗ ┗┫┗┛┗┛┗┗┻┛
 //       ┛
 binds {
-
-	Alt+Tab { focus-window-previous; }
-	Mod+Ctrl+Tab { focus-window-previous; }
-	// Mod+Ctrl+Tab { next-window; }
-	Mod+F4 { close-window; }
-	Alt+F4 { close-window; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
-    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    // closing applications
+	Alt+Tab { focus-window-previous; }
+	Alt+F4 { close-window; }
 
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
-    // For example, this is a standard bind to toggle the screen reader (orca).
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
-    // Using spawn-sh allows to pass multiple arguments together with the command.
+    // media
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
-    Mod+F5 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
-    Mod+F6 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    Mod+F7        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-    Mod+F8     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     XF86AudioNext   { spawn "playerctl" "next"; }
-    Mod+F11   { spawn "playerctl" "next"; }
     XF86AudioPrev   { spawn "playerctl" "previous"; }
-    Mod+F9   { spawn "playerctl" "previous"; }
     XF86AudioPlay   { spawn "playerctl" "play-pause"; }
-    Mod+F10   { spawn "playerctl" "play-pause"; }
     XF86AudioStop   { spawn "playerctl" "stop"; }
+
+    Mod+F5 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
+    Mod+F6 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
+    Mod+F7 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    Mod+F8 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    Mod+F9  { spawn "playerctl" "previous"; }
+    Mod+F10 { spawn "playerctl" "play-pause"; }
+    Mod+F11 { spawn "playerctl" "next"; }
     Mod+F12   { spawn "playerctl" "stop"; }
 
-    // Example brightness key mappings for brightnessctl.
-    // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
-    // but you need to manually put each argument in separate "" quotes.
+    // brightnessctl
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    Mod+XF86AudioRaiseVolume { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    Mod+XF86AudioLowerVolume { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    // Open/close the Overview: a zoomed-out view of workspaces and windows.
-    // You can also move the mouse into the top-left hot corner,
-    // or do a four-finger swipe up on a touchpad.
     Mod+Tab cooldown-ms=50 repeat=true  { toggle-overview; }
 
-    Mod+C cooldown-ms=50  { close-window; }
-
     // workspace navigation
-    Mod+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
-    Alt+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
-    Mod+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
-    Alt+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
     Mod+Up    { focus-workspace-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
-    Alt+Up    { focus-workspace-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
+    Mod+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
     Mod+Down  { focus-workspace-down; }
+    Mod+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
+    Alt+Up    { focus-workspace-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
+    Alt+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
     Alt+Down  { focus-workspace-down; }
+    Alt+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
 
     // move windows across the desktop, best used in overview mode ;)
     Mod+Ctrl+Left  { move-column-left; }
@@ -87,14 +72,6 @@ binds {
     Mod+Ctrl+Shift+Down { move-workspace-down; }
     Alt+Ctrl+Shift+Down { move-workspace-down; }
 
-    // You can refer to workspaces by index. However, keep in mind that
-    // niri is a dynamic workspace system, so these commands are kind of
-    // "best effort". Trying to refer to a workspace index bigger than
-    // the current workspace count will instead refer to the bottommost
-    // (empty) workspace.
-    //
-
-
     Mod+Ctrl+Grave { focus-workspace-previous; } // Switches focus between the current and the previous workspace.
 
     // Row manipulations
@@ -108,8 +85,6 @@ binds {
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }        // have no use for this but leaving it here (hnuftblih)
-
-    // Mod+C { center-column; }
 
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
@@ -147,18 +122,12 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
+    // screenshot
     Print { screenshot; }
+    Mod+Ctrl+S { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
-    // Applications such as remote-desktop clients and software KVM switches may
-    // request that niri stops processing the keyboard shortcuts defined here
-    // so they may, for example, forward the key presses as-is to a remote machine.
-    // It's a good idea to bind an escape hatch to toggle the inhibitor,
-    // so a buggy application can't hold your session hostage.
-    //
-    // The allow-inhibiting=false property can be applied to other binds as well,
-    // which ensures niri always processes them, even when an inhibitor is active.
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
@@ -175,5 +144,4 @@ binds {
     Mod+Shift+F3 { move-column-to-monitor "DP-1"; }
     Mod+Shift+Ctrl+F2 { move-workspace-to-monitor "eDP-1"; }
     Mod+Shift+Ctrl+F3 { move-workspace-to-monitor "DP-1"; }
-
 }
