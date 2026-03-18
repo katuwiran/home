@@ -41,12 +41,12 @@ binds {
     // workspace navigation
     Mod+Up    { focus-workspace-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
     Mod+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
-    Mod+Down  { focus-workspace-down; }
-    Mod+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
-    Alt+Up    { focus-workspace-up; }       // (since my default window sizes are either 0.5 or 1 screenful)
-    Alt+Left  { focus-column-left; }        // I won't be using rows (just an HD laptop screen sadge), hence Mod+Arrow Keys
+    Mod+Down  { focus-workspace-down; }   // are a way to navigate on my desktop as if all windows are in a 2D grid
+    Mod+Right { focus-column-right; }
+    Alt+Up    { focus-workspace-up; }
+    Alt+Left  { focus-column-left; }
     Alt+Down  { focus-workspace-down; }
-    Alt+Right { focus-column-right; }       // are a way to navigate on my desktop as if all windows are in a 2D grid
+    Alt+Right { focus-column-right; }
 
     // move windows across the desktop, best used in overview mode ;)
     Mod+Ctrl+Left  { move-column-left; }
@@ -56,20 +56,23 @@ binds {
 
     // workspace navigation (mouse)
     Mod+WheelScrollUp         cooldown-ms=50 { focus-column-left; }        // I don't know why. My brain just prefers it this way.
-    Alt+WheelScrollUp         cooldown-ms=50 { focus-column-left; }        // I don't know why. My brain just prefers it this way.
     Mod+WheelScrollDown       cooldown-ms=50 { focus-column-right; }       // Horizontal nav is much more conceptually related
-    Alt+WheelScrollDown       cooldown-ms=50 { focus-column-right; }       // Horizontal nav is much more conceptually related
     Mod+Shift+WheelScrollUp   cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
-    Alt+Shift+WheelScrollUp   cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
-    Mod+MouseForward          cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
-    Alt+MouseForward          cooldown-ms=50 { focus-workspace-up; }       // Vertical nav means you're jumping across contexts
     Mod+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
-    Alt+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
-    Mod+MouseBack             cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
-    Alt+MouseBack             cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
+    Mod+MouseForward          cooldown-ms=50 { focus-workspace-up; }
+    Mod+MouseBack             cooldown-ms=50 { focus-workspace-down; }
     Mod+Ctrl+Shift+Up   { move-workspace-up; }
-    Alt+Ctrl+Shift+Up   { move-workspace-up; }
     Mod+Ctrl+Shift+Down { move-workspace-down; }
+
+    Alt+WheelScrollDown       cooldown-ms=50 { focus-column-right; }
+    Alt+WheelScrollUp         cooldown-ms=50 { focus-column-left; }
+    Alt+WheelScrollLeft       cooldown-ms=50 { focus-workspace-down; }
+    Alt+WheelScrollRight      cooldown-ms=50 { focus-workspace-up; }
+    Alt+Shift+WheelScrollUp   cooldown-ms=50 { focus-workspace-up; }
+    Alt+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }
+    Alt+MouseForward          cooldown-ms=50 { focus-workspace-up; }
+    Alt+MouseBack             cooldown-ms=50 { focus-workspace-down; }
+    Alt+Ctrl+Shift+Up   { move-workspace-up; }
     Alt+Ctrl+Shift+Down { move-workspace-down; }
 
     Mod+Ctrl+Grave { focus-workspace-previous; } // Switches focus between the current and the previous workspace.
