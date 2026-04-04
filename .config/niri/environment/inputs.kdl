@@ -20,7 +20,7 @@ input {
     }
 
     mouse {
-        accel-speed -0.5     // slower mouse
+        accel-speed -0.728     // slower mouse
         accel-profile "flat" // no mouse acceleration
     }
 
@@ -36,6 +36,6 @@ input {
     // focus-follows-mouse max-scroll-amount="100%" // Allow focus-follows-mouse always
     // workspace-auto-back-and-forth // disabling auto back and forth for now
 
-    mod-key "Mod5"        // my windows key broke.
-    mod-key-nested "Alt"  // remapped LAlt as AltGr. RAlt as LAlt. Life is good.
+    //mod-key "Alt"
+    disable-power-key-handling
 }
