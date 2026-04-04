@@ -31,7 +31,7 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
-        "visualizerType": "linear",
+        "visualizerType": "wave",
         "volumeFeedback": false,
         "volumeOverdrive": false,
         "volumeStep": 5
@@ -134,6 +134,11 @@
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
                     "showPowerProfiles": true
+                },
+                {
+                    "icon": "rocket",
+                    "iconColor": "none",
+                    "id": "Launcher"
                 }
             ],
             "right": [
@@ -213,12 +218,12 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": true,
+        "darkMode": false,
         "generationMethod": "tonal-spot",
         "manualSunrise": "08:00",
         "manualSunset": "17:00",
         "monitorForColors": "",
-        "predefinedScheme": "Moonlight",
+        "predefinedScheme": "Skylight",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
