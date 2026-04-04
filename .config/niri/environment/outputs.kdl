@@ -20,3 +20,27 @@ output "DP-1" {
 	mode "1920x1080@60"
 	position x=-1920 y=0
 }
+
+binds {
+    // Focus specific monitors
+    Mod+Alt+1 { focus-monitor "eDP-1"; }
+    Mod+Alt+2 { focus-monitor "DP-1"; }
+    Mod+Alt+3 { focus-monitor "HDMI-A-1"; }
+
+    // Move individual windows to specific monitors
+    Mod+Shift+Alt+1 { move-window-to-monitor "eDP-1"; }
+    Mod+Shift+Alt+2 { move-window-to-monitor "DP-1"; }
+    Mod+Shift+Alt+3 { move-window-to-monitor "HDMI-A-1"; }
+
+    // Focus monitors directionally
+    Mod+Alt+Left  { focus-monitor-left; }
+    Mod+Alt+Right { focus-monitor-right; }
+    Mod+Alt+Up    { focus-monitor-up; }
+    Mod+Alt+Down  { focus-monitor-down; }
+
+    // Move windows directionally
+    Mod+Shift+Alt+Left  { move-window-to-monitor-left; }
+    Mod+Shift+Alt+Right { move-window-to-monitor-right; }
+    Mod+Shift+Alt+Up    { move-window-to-monitor-up; }
+    Mod+Shift+Alt+Down  { move-window-to-monitor-down; }
+}

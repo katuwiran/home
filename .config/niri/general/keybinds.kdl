@@ -49,10 +49,10 @@ binds {
     Alt+Right { focus-column-right; }
 
     // move windows across the desktop, best used in overview mode ;)
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+Up    { move-column-to-workspace-up; }
-    Mod+Ctrl+Down  { move-column-to-workspace-down; }
+    Mod+Shift+Left  { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up    { move-column-to-workspace-up; }
+    Mod+Shift+Down  { move-column-to-workspace-down; }
 
     // workspace navigation (mouse)
     Mod+WheelScrollUp         cooldown-ms=50 { focus-column-left; }        // I don't know why. My brain just prefers it this way.
@@ -61,8 +61,8 @@ binds {
     Mod+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }     // Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
     Mod+MouseForward          cooldown-ms=50 { focus-workspace-up; }
     Mod+MouseBack             cooldown-ms=50 { focus-workspace-down; }
-    Mod+Ctrl+Shift+Up   { move-workspace-up; }
-    Mod+Ctrl+Shift+Down { move-workspace-down; }
+    Mod+Ctrl+Up   { move-workspace-up; }
+    Mod+Ctrl+Down { move-workspace-down; }
 
     Alt+WheelScrollDown       cooldown-ms=50 { focus-column-right; }
     Alt+WheelScrollUp         cooldown-ms=50 { focus-column-left; }
@@ -78,8 +78,10 @@ binds {
     Mod+Ctrl+Grave { focus-workspace-previous; } // Switches focus between the current and the previous workspace.
 
     // Row manipulations
-    Mod+BracketLeft  { consume-or-expel-window-left; }      // I only really use rows on terminals (small screen)
-    Mod+BracketRight { consume-or-expel-window-right; }     // so this stays
+    Mod+Ctrl+Shift+Up    { move-window-up; }
+    Mod+Ctrl+Shift+Down  { move-window-down; }
+    Mod+Ctrl+Shift+Left  { consume-or-expel-window-left; }
+    Mod+Ctrl+Shift+Right { consume-or-expel-window-right; }
     Mod+Period { expel-window-from-column; }
 
     Mod+Space { switch-preset-column-width; }
@@ -109,7 +111,7 @@ binds {
 
     // Move the focused window between the floating and the tiling layout.
     Mod+Shift+Space       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Ctrl+Space { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
 
